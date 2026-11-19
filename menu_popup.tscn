@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bgugyqv4pjk21"]
+
+[ext_resource type="Texture2D" uid="uid://kiigl8tmgy6n" path="res://sprites/0.png" id="1_cwnpb"]
+
+[node name="MenuPopup" type="Popup" unique_id=150884042]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(200, 300)
+visible = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=946168184]
+modulate = Color(0, 0, 0, 0.28235295)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_cwnpb")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=775675911]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=606666848]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "No USE 
+write your own"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=625733714]
+layout_mode = 2
+text = "OK"

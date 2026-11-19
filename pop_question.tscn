@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cidnklj6jpp3r"]
+
+[ext_resource type="Texture2D" uid="uid://kiigl8tmgy6n" path="res://sprites/0.png" id="1_rvk1c"]
+[ext_resource type="Script" uid="uid://lhpf02dob55u" path="res://pop_question.gd" id="1_uqoti"]
+
+[node name="PopQuestion" type="CenterContainer" unique_id=997033946]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+script = ExtResource("1_uqoti")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=81723980]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=1931478488]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Choose "
+
+[node name="Sprite" type="TextureRect" parent="HBoxContainer" unique_id=19490840]
+layout_mode = 2
+texture = ExtResource("1_rvk1c")

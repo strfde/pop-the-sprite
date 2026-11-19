@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://dh8nn6sf4725l"]
+
+[ext_resource type="PackedScene" uid="uid://ch1wihs76ljm7" path="res://header.tscn" id="1_t5odh"]
+[ext_resource type="PackedScene" uid="uid://cidnklj6jpp3r" path="res://pop_question.tscn" id="2_xwjjp"]
+[ext_resource type="Script" uid="uid://bv2rwmwvavrsr" path="res://sprite_bound_manager.gd" id="3_norob"]
+[ext_resource type="Script" uid="uid://hlodacmnuohd" path="res://game_manager.gd" id="4_yla3h"]
+[ext_resource type="PackedScene" uid="uid://bgugyqv4pjk21" path="res://menu_popup.tscn" id="5_j7yda"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yla3h"]
+bg_color = Color(0.22, 0.22, 0.22, 0.87058824)
+
+[node name="GameScreen" type="Control" unique_id=127691619]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=70516255]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2129723055]
+layout_mode = 2
+theme_override_constants/separation = 20
+metadata/_edit_use_anchors_ = true
+
+[node name="Header" parent="MarginContainer/VBoxContainer" unique_id=114650757 instance=ExtResource("1_t5odh")]
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="PopQuestion" parent="MarginContainer/VBoxContainer" unique_id=1985821309 instance=ExtResource("2_xwjjp")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="SpriteContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer" unique_id=459266]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+scroll_hint_mode = 3
+tile_scroll_hint = true
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/SpriteContainer" unique_id=507933207]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Grid" type="GridContainer" parent="MarginContainer/VBoxContainer/SpriteContainer/MarginContainer" unique_id=9300726]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 25
+columns = 12
+
+[node name="MsgPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=693227153]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_yla3h")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MsgPanel" unique_id=1699329753]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.74138474, 0.7413847, 0.74138457, 1)
+theme_override_colors/font_shadow_color = Color(0.52906674, 0.5290667, 0.5290667, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 96
+text = "! wait while you can ¡"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpriteBoundManager" type="Node2D" parent="." unique_id=297456393]
+script = ExtResource("3_norob")
+
+[node name="GameManager" type="Node2D" parent="." unique_id=732206327]
+script = ExtResource("4_yla3h")
+
+[node name="MenuPopup" parent="." unique_id=150884042 instance=ExtResource("5_j7yda")]
+visible = false

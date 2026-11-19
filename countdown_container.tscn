@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c84sd11cwwpwm"]
+
+[ext_resource type="Script" uid="uid://cxb5tqiami3vp" path="res://countdown_container.gd" id="1_g0q2i"]
+[ext_resource type="Script" uid="uid://dwbfh33ohn32a" path="res://countdown_label.gd" id="1_mvnt6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3umgl"]
+
+[node name="CountdownContainer" type="PanelContainer" unique_id=641323136]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_3umgl")
+script = ExtResource("1_g0q2i")
+
+[node name="CountdownLabel" type="Label" parent="." unique_id=2048453387]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "sss"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_mvnt6")
+
+[node name="CountdownTimer" type="Timer" parent="." unique_id=2019807268]
+wait_time = 300.9
+one_shot = true
+autostart = true
+ignore_time_scale = true

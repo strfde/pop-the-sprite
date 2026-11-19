@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://ch1wihs76ljm7"]
+
+[ext_resource type="PackedScene" uid="uid://c84sd11cwwpwm" path="res://countdown_container.tscn" id="1_77m70"]
+[ext_resource type="Script" uid="uid://cfrcusycywo0j" path="res://header.gd" id="1_gotjp"]
+[ext_resource type="Script" uid="uid://6jyydpnq8roy" path="res://menu_button.gd" id="1_roa84"]
+[ext_resource type="Texture2D" uid="uid://nutb3034y5b1" path="res://menuList.png" id="2_7k877"]
+[ext_resource type="PackedScene" uid="uid://25d80nnfcj0t" path="res://streak_container.tscn" id="2_roa84"]
+[ext_resource type="Script" uid="uid://bifugrwkp3qm0" path="res://streak_container.gd" id="4_rbam1"]
+
+[node name="Header" type="HBoxContainer" unique_id=114650757]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_gotjp")
+metadata/_edit_use_anchors_ = true
+
+[node name="MenuButton" type="Button" parent="." unique_id=241343487]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+icon = ExtResource("2_7k877")
+icon_alignment = 1
+script = ExtResource("1_roa84")
+
+[node name="CountdownContainer" parent="." unique_id=641323136 instance=ExtResource("1_77m70")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StreakContainer" parent="." unique_id=2106137732 instance=ExtResource("2_roa84")]
+layout_mode = 2
+script = ExtResource("4_rbam1")

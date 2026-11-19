@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://25d80nnfcj0t"]
+
+[node name="StreakContainer" type="PanelContainer" unique_id=641323136]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=610947902]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="MarginContainer" unique_id=2048453387]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "Streak"
+horizontal_alignment = 1
+vertical_alignment = 1
